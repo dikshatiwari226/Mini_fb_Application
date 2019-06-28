@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-center"><h1>List of Posts</h1></div><br>
+
+<table class="table table-striped table-dark table-bordered">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Text</th>
+			<th>User</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @posts.each  do |p|%>
+			<tr>
+				<td><%= p.title %></td>
+				<td><%= p.text %></td>
+				<td><%= p.user.try(:email)%></td>
+				<td><%= link_to 'Show',  post_path(p) %></td>
+				<td><%= link_to 'Edit', edit_post_path(p) %></td>
+				<td><%= link_to 'Delete',  post_path(p), method: :delete, data: {confirm: 'Are You Sure'} %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<div class="offset-md-5">
+	<%=	link_to 'New post', new_post_path ,:class=> "btn btn-outline-warning" %>
+</div>
