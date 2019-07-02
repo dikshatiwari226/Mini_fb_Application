@@ -6,5 +6,10 @@ class User < ApplicationRecord
 
   has_many :authentications
   has_many	:posts
+  has_many 	:likes, dependent: :destroy 
 	validates :email, :presence => true
+
+	def name
+		email.split('@')[0]
+	end
 end

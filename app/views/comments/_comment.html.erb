@@ -1,15 +1,33 @@
-<p>
-	<strong>Commenter:</strong>
-	<%= comment.commenter%>
-</p>
+<div class="card" style="margin-bottom: 20px;">
+  
+  <div class="card-body">
+    <h5 class="card-title"><%= comment.body %></h5>
+    <p class="card-text"><%= comment.user.name %></p>
+    <p class="card-text"><small><%= time_ago_in_words(comment.created_at) %></small></p>
 
-<p>
-	<strong>Comment:</strong>
-	<%= comment.body %>
-</p>
+    <span id="comment_<%= comment.id %>_likes">
+      <%= render "likes/likes", likeable: comment %>
+    </span>
 
-<p>
-	<%= link_to 'Destroy Comment', [comment.post, comment], 
-								method: :delete,
-								data: {confirm: 'Are you sure?'}%>
-</p>
+    <% if current_user == comment.user %>
+    	<span> | <%= link_to 'Delete',[comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'} %></span>
+    <% end %>
+  </div>
+  
+  <div class="card-footer">
+    <h5>Replies(<%= comment.replies.count %>):</h5>
+    <hr>
+    <div id="replyContainer">
+      <%= render 'comments/showreply', comment: comment %>
+    </div>
+    <div id="replyForm">
+      <%= render 'replies/form', comment: comment %>
+    </div>
+
+  </div>
+
+
+  
+</div>
+
+

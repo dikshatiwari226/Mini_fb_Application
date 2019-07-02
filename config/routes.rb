@@ -8,8 +8,14 @@ Rails.application.routes.draw do
   
 
   resources :posts do
-  	resources :comments
+  	resources :comments do
+      resources :replies
+    end
   end
+
+  resources :likes
+
+    
   root 'welcome#index'
   match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
   match '/auth/failure', :to => 'sessions#failure', via: [:get, :post]

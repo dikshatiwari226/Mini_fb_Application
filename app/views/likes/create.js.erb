@@ -1,0 +1,7 @@
+<% if @like.likeable.class.name == "Post" %>
+	$("#post_likes").html("<%= escape_javascript render 'likes/likes', likeable: @like.likeable %>");
+<% elsif @like.likeable.class.name == "Comment" %>
+	$("#comment_<%= @like.likeable.id %>_likes").html("<%= escape_javascript render 'likes/likes', likeable: @like.likeable %>");
+<% else %>
+	$("#reply_<%= @like.likeable.id %>_likes").html("<%= escape_javascript render 'likes/likes', likeable: @like.likeable %>");
+<% end %>

@@ -1,0 +1,14 @@
+<% comment.replies.each do |r| %>
+      <h5 class="card-title"><%= r.body %></h5>
+      <p class="card-text"><%= r.user.name %></p>
+      <p class="card-text"><small><%= time_ago_in_words(r.created_at) %></small></p>
+
+      <span id="reply_<%= r.id %>_likes">
+        <%= render "likes/likes", likeable: r %>
+      </span>
+
+      <% if current_user == r.user %>
+        <span> | <%= link_to 'Delete',[r.comment.post, r.comment, r], method: :delete, data: {confirm: 'Are you sure?'} %></span>
+      <% end %>
+      <hr>
+<% end %>

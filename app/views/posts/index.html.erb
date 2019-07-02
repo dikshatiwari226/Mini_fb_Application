@@ -6,6 +6,7 @@
 			<th>Title</th>
 			<th>Text</th>
 			<th>User</th>
+			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -13,12 +14,11 @@
 			<tr>
 				<td><%= p.title %></td>
 				<td><%= p.text %></td>
-				<td><%= p.user.try(:email).split('@')[0]%></td>
+				<td><%= p.user.name %></td>
 				<td><%= link_to 'Show',  post_path(p) %></td>
-				<% #byebug%>
-				<% if current_user.id == p.user_id %>
-				<td><%= link_to 'Edit', edit_post_path(p) %></td>
-				<td><%= link_to 'Delete',  post_path(p), method: :delete, data: {confirm: 'Are You Sure'} %></td>
+				<% if current_user == p.user %>
+					<td><%= link_to 'Edit', edit_post_path(p) %></td>
+					<td><%= link_to 'Delete',  post_path(p), method: :delete, data: {confirm: 'Are You Sure'} %></td>
 				<% end %>
 			</tr>
 		<% end %>
