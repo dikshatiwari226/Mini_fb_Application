@@ -1,7 +1,7 @@
 <% if likeable.already_liked?(current_user) %>
 	<%= link_to 'Unlike', like_path(likeable.likes.where(user_id: current_user.id).first), method: :delete, remote: true %>
+		<span><%= current_user.name%></span>
 <% else %>
 	<%= link_to 'Like', likes_path(likeable_type: likeable.class.name, likeable_id: likeable.id), method: :post, remote: true %>
 <% end %>
 <small><%= likeable.likes.count %> likes</small>
- 

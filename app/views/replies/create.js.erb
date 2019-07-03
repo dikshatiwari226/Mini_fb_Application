@@ -1,4 +1,2 @@
-<%#byebug%>
-
-$("#replyConatainer").html("<%= escape_javascript render 'comments/showreply' %>");
-$("#replyForm").html("<%= escape_javascript render 'replies/form' %>"); 
+ $("#replyConatainer").html("<%= escape_javascript render 'comments/showreply',  comment: @comment. %>");
+$("#replyForm").html("<%= escape_javascript render 'replies/form', comment: @comment %>"); 

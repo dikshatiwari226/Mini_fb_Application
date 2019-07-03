@@ -1,4 +1,4 @@
-<%= form_with(model:[comment.post, comment, comment.replies.build], remote:true)	do |f|%>
+<%= form_with(model:[comment.post, comment, comment.replies.build], remote: true)	do |f|%>
 
 	<%= f.hidden_field :user_id, value: current_user.id %>
 	<div class="form-group row d-flex justify-content-center">

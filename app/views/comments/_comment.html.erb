@@ -9,7 +9,7 @@
       <%= render "likes/likes", likeable: comment %>
     </span>
 
-    <% if current_user == comment.user %>
+    <% if current_user == comment.user || current_user == comment.post.user %>
     	<span> | <%= link_to 'Delete',[comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'} %></span>
     <% end %>
   </div>
@@ -17,11 +17,11 @@
   <div class="card-footer">
     <h5>Replies(<%= comment.replies.count %>):</h5>
     <hr>
-    <div id="replyContainer">
-      <%= render 'comments/showreply', comment: comment %>
+    <div id="replyConatainer">
+      <%= render partial: 'comments/showreply', locals: {comment: comment} %>
     </div>
     <div id="replyForm">
-      <%= render 'replies/form', comment: comment %>
+      <%= render partial: 'replies/form', locals: {comment: comment}  %>
     </div>
 
   </div>
