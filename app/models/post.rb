@@ -7,4 +7,7 @@ class Post < ApplicationRecord
 	def already_liked?(user)
   	likes.where(user_id: user.id).exists?
 	end
+
+  	mount_uploader :avatar, AvatarUploader
+
 end

@@ -1,8 +1,14 @@
 	<div class="jumbotron">
   <h1>
   	<%= @post.title %>
+
   	<% if current_user == @post.user %>
-  	<small class="float-right"><%= link_to 'Edit' , edit_post_path, :class=> "btn btn-primary"%></small>
+  	<small class="float-right">
+  	<% if @post.avatar.present? %>
+  		<%= image_tag @post.avatar.url, :size => "260x180"  %>
+  	<% end %>
+  		<%= link_to 'Edit' , edit_post_path, :class=> "btn btn-primary"%>
+  	</small>
   	<br>
   	<% end %>
 	</h1>

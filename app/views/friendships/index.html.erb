@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center"><h1>List of Users</h1></div><br>
+
+<table class="table table-striped table-dark table-bordered">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Profile Img</th>
+			<th>Actions</th>
+		</tr> 
+	</thead>
+	<tbody>
+		<% @users.each  do |user|%>
+			<tr>
+				<td><%= user.id %></td>
+				<td><%= link_to friendship_path(user.id) do%>
+						<%= user.name %>
+					<% end %>
+				</td>
+				<td><%= user.email %></td>
+				<td><%= link_to friendship_path(user.id) do%>
+						<%=  image_tag user.avatar.url, :size => "260x180" if user.avatar.present? %>
+						<% end %>
+				</td>
+				<td>
+					<% if current_user.request_not_send?(user) %>
+						<%= link_to 'Send',  send_request_friendship_path(user.id) %>
+					<% else %>
+						<% if current_user.request_send?(user) %>
+							<%= current_user.friendship(user).status %>
+						<% else %>
+							<% if user.friendship(current_user).status_id == 1 %>
+								<%= link_to 'Accept', accept_friendship_path(user.id) %>
+								 | 
+								<%= link_to 'Reject', reject_friendship_path(user.id) %>
+							<% else %>
+								<%= user.friendship(current_user).status %>
+							<% end %>
+						<% end %>
+						
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<div class="offset-md-5">
+	<%#=	link_to 'New post', new_post_path ,:class=> "btn btn-outline-warning" %>
+</div>

@@ -14,7 +14,14 @@ Rails.application.routes.draw do
   end
 
   resources :likes
-
+  resources :friendships do
+    member do
+      get :send_request
+      get :accept
+      get :reject
+    end
+  end
+  # resources :users
     
   root 'welcome#index'
   match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]

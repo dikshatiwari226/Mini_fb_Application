@@ -6,8 +6,9 @@
 			<th>Title</th>
 			<th>Text</th>
 			<th>User</th>
+			<th>Image</th>
 			<th>Actions</th>
-		</tr>
+		</tr> 
 	</thead>
 	<tbody>
 		<% @posts.each  do |p|%>
@@ -15,6 +16,7 @@
 				<td><%= p.title %></td>
 				<td><%= p.text %></td>
 				<td><%= p.user.name %></td>
+				<td><%= image_tag p.avatar.url.to_s, :size => "260x180" %></td>
 				<td><%= link_to 'Show',  post_path(p) %></td>
 				<% if current_user == p.user %>
 					<td><%= link_to 'Edit', edit_post_path(p) %></td>

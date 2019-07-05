@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_134524) do
+ActiveRecord::Schema.define(version: 2019_07_05_073539) do
 
   create_table "authentications", force: :cascade do |t|
     t.string "provider"
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 2019_07_01_134524) do
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
+  create_table "friendships", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "receiver_id"
+    t.integer "status_id", default: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "likes", force: :cascade do |t|
     t.string "likeable_type"
     t.integer "likeable_id"
@@ -47,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_134524) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "avatar"
   end
 
   create_table "replies", force: :cascade do |t|
@@ -67,6 +76,8 @@ ActiveRecord::Schema.define(version: 2019_07_01_134524) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "avatar"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

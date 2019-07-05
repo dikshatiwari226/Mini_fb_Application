@@ -73,3 +73,4 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2' 
 
 gem 'bootstrap-glyphicons' 
+gem 'carrierwave'
