@@ -7,3 +7,9 @@ development:
   username: root
   password: root
  
+
+production:
+  <<: *default
+  database: minifacebook_app
+  username: root
+  password: root
