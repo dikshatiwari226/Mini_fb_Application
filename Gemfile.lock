@@ -168,6 +168,7 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     orm_adapter (0.5.0)
+    pg (1.1.4)
     popper_js (1.14.5)
     public_suffix (3.1.1)
     puma (3.12.1)
@@ -234,7 +235,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.1)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -282,13 +282,13 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-linkedin
   omniauth-twitter
+  pg
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   thin
   turbolinks (~> 5)
   tzinfo-data
