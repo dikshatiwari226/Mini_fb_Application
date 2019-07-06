@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many	:posts
   has_many 	:likes, dependent: :destroy
   has_many :friendships 
+  has_many  :message
+  has_many  :conversation, foreign_key: :sender_id
 	validates :email, :presence => true
 
 	def name

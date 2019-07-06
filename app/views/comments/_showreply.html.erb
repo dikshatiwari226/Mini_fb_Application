@@ -1,6 +1,10 @@
 <% comment.replies.each do |r| %>
 		<h5 class="card-title"><%= r.body %></h5>
-		<p class="card-text"><%= r.user.name %></p>
+		<p class="card-text">
+			<%= link_to friendship_path(r.user.id) do %>
+        		<%= r.user.name %></p>
+      		<% end %>
+			<%#= r.user.name %>
 		<p class="card-text"><small><%= time_ago_in_words(r.created_at) %></small></p>
 
 		<span id="reply_<%= r.id %>_likes">

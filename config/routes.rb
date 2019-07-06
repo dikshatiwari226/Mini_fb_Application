@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       get :reject
     end
   end
-  # resources :users
+   resources :conversations
     
   root 'welcome#index'
   match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]

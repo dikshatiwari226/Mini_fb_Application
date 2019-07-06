@@ -2,7 +2,10 @@
   
   <div class="card-body">
     <h5 class="card-title"><%= comment.body %></h5>
-    <p class="card-text"><%= comment.user.name %></p>
+    <p class="card-text">
+      <%= link_to friendship_path() do %>
+        <%= comment.user.name %></p>
+      <% end %>
     <p class="card-text"><small><%= time_ago_in_words(comment.created_at) %></small></p>
 
     <span id="comment_<%= comment.id %>_likes">
@@ -17,7 +20,7 @@
   <div class="card-footer">
     <h5>Replies(<%= comment.replies.count %>):</h5>
     <hr>
-    <div id="replyConatainer">
+    <div id="replyContainer_<%= comment.id %>">
       <%= render partial: 'comments/showreply', locals: {comment: comment} %>
     </div>
     <div id="replyForm">

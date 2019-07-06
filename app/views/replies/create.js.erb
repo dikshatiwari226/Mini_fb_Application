@@ -1,2 +1,3 @@
- $("#replyConatainer").html("<%= escape_javascript render 'comments/showreply',  comment: @comment. %>");
-$("#replyForm").html("<%= escape_javascript render 'replies/form', comment: @comment %>"); 
+ $("#replyContainer_<%= @comment.id %>").html("<%= escape_javascript render 'comments/showreply', comment: @comment %>");
+// $("#replyForm").html("<%#= escape_javascript render 'replies/form', comment: @comment %>"); 
+$("#reply_body_<%= @comment.id %>").val("");
