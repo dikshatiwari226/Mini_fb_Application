@@ -74,3 +74,4 @@ gem 'omniauth-google-oauth2'
 
 gem 'bootstrap-glyphicons' 
 gem 'carrierwave'
+gem 'figaro'
