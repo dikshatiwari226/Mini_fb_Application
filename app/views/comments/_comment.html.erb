@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title"><%= comment.body %></h5>
     <p class="card-text">
-      <%= link_to friendship_path() do %>
+      <%= link_to friendship_path(comment.user) do %>
         <%= comment.user.name %></p>
       <% end %>
     <p class="card-text"><small><%= time_ago_in_words(comment.created_at) %></small></p>
