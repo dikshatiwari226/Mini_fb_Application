@@ -4,8 +4,8 @@ default: &default
 development:
   <<: *default
   database: minifacebook_app
-  username: postgres
-  # password: root
+  username: root
+  password: root
  
 
 production:
