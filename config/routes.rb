@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
  
+ root 'welcome#index'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/failure'
   devise_for :users
+
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
+    
+    resources :messages, only: [:create]
+  end
+  
   get 'welcome/index'
   
 
@@ -21,9 +31,12 @@ Rails.application.routes.draw do
       get :reject
     end
   end
-   resources :conversations
+  
     
-  root 'welcome#index'
   match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
   match '/auth/failure', :to => 'sessions#failure', via: [:get, :post]
 end
+
+
+
+

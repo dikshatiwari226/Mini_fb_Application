@@ -5,16 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark" style="height:80px;">
-      <ul style="margin-bottom:29px;">
-          <a href=" /posts" class="navbar-brand">Post</a>
+    <nav class="navbar navbar-dark bg-dark">
+      <ul style="margin-bottom:29px;height: 25px;">
+          <a href=" /posts" class="navbar-brand">Posts</a>
           <a href="/friendships" class="navbar-brand">All Users</a>
-          <a href="#" class="navbar-brand">Status</a>
+          <a href="/" class="navbar-brand">Conversations</a>
       </ul>
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
@@ -39,3 +39,4 @@
     </div>
   </body>
 </html>
+
