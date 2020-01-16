@@ -7,7 +7,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-    ruby '2.3.1'
+* ruby '2.3.1'
 
 * How to setup Project
 * 1- git clone https://github.com/dikshatiwari226/Mini_fb_Application.git
