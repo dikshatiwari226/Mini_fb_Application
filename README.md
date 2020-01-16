@@ -7,14 +7,14 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-* ruby '2.3.1'
+    * ruby '2.3.1'
 
 * How to setup Project
-* 1- git clone https://github.com/dikshatiwari226/Mini_fb_Application.git
-* 2- Run bundle install
-* 3- rails db:create
-* 4- rails db:migrate
-* 5- Start server = rails s
+    * 1- git clone https://github.com/dikshatiwari226/Mini_fb_Application.git
+    * 2- Run bundle install
+    * 3- rails db:create
+    * 4- rails db:migrate
+    * 5- Start server = rails s
   
 * Description:-
     MiniFacebook have to many features:-
