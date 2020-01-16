@@ -10,11 +10,11 @@ Things you may want to cover:
     ruby '2.3.1'
 
 * How to setup Project
-  1- git clone https://github.com/dikshatiwari226/Mini_fb_Application.git
-  2- Run bundle install
-  3- rails db:create
-  4- rails db:migrate
-  5. Start server = rails s
+* 1- git clone https://github.com/dikshatiwari226/Mini_fb_Application.git
+* 2- Run bundle install
+* 3- rails db:create
+* 4- rails db:migrate
+* 5- Start server = rails s
   
 * Description:-
     MiniFacebook have to many features:-
@@ -28,5 +28,6 @@ Things you may want to cover:
     3. User comment on your Facebook content using their Facebook account.
     4. Facebook users send messages to each other.
     5. user can edit your own profile.
+...
 
 ![alt text](https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-260nw-721703848.jpg)
