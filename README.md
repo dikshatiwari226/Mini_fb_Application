@@ -33,9 +33,7 @@ Things you may want to cover:
 ...
  ![ScreenShot](https://raw.github.com/dikshatiwari226/Mini_fb_Application/new/master/Mini_fb_Application/Screenshot from  
       2020-01-17 11-08-38.png)
-   ![alt text](https://minifacebookapp.herokuapp.com/posts)
+   ![alt text](Mini_fb_Application/blob/master/Screenshot/Screenshot from 2020-01-17 11-08-38.png)
 
-   ![alt text](https://minifacebookapp.herokuapp.com/friendships)
    
-   ![alt text](https://minifacebookapp.herokuapp.com/)
    
