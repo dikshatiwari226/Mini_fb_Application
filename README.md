@@ -32,6 +32,8 @@ Things you may want to cover:
 
 ...
 
-![alt text](https://minifacebookapp.herokuapp.com/posts)
-![alt text](https://minifacebookapp.herokuapp.com/friendships)
-![alt text](https://minifacebookapp.herokuapp.com/)
+   ![alt text](https://minifacebookapp.herokuapp.com/posts)
+
+   ![alt text](https://minifacebookapp.herokuapp.com/friendships)
+   
+   ![alt text](https://minifacebookapp.herokuapp.com/)
