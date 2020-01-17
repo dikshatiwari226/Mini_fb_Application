@@ -31,11 +31,15 @@ Things you may want to cover:
 
 
 ...
+   <div class="row">
+      <img src="Screenshot%20from%202020-01-17%2011-08-38.png" height="300" width="400" />
   
-   ![alt text](Screenshot%20from%202020-01-17%2011-08-38.png)
+      <img src="Screenshot%20from%202020-01-17%2011-09-49.png" height="300" width="400" />
+  
+      <img src="Screenshot%20from%202020-01-17%2011-10-34.png" height="300" width="400" />
+   </div>
+  
+  
    
-   ![alt text](Screenshot%20from%202020-01-17%2011-09-49.png)
-   
-   ![alt text](Screenshot%20from%202020-01-17%2011-10-34.png)
    
    
