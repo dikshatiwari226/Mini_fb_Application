@@ -32,6 +32,6 @@ Things you may want to cover:
 
 ...
 
-*![alt text](Screenshot from 2020-01-17 11-08-38.png)
-*![alt text](Screenshot from 2020-01-17 11-09-49.png)
-*![alt text](/home/bittern-38/Pictures/Screenshot from 2020-01-17 11-10-34.png?raw=true "Optional Title")
+*![alt text](https://minifacebookapp.herokuapp.com/posts)
+*![alt text](https://minifacebookapp.herokuapp.com/friendships)
+*![alt text](https://minifacebookapp.herokuapp.com/)
