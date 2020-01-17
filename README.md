@@ -32,6 +32,6 @@ Things you may want to cover:
 
 ...
  
-   ![alt text](Mini_fb_Application/Screenshot from 2020-01-17 11-08-38.png)
+   ![alt text](Screenshot from 2020-01-17 11-08-38.png)
    
    
