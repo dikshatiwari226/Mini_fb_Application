@@ -31,10 +31,11 @@ Things you may want to cover:
 
 
 ...
- 
-   ![alt text](Mini_fb_Application/blob/master/Screenshot%20from%202020-01-17%2011-08-38.png)
-   
-   ![alt text](Mini_fb_Application/Screenshot%20from%20202020-01-17%2011-08-38.png)
-   
+  
    ![alt text](Screenshot%20from%202020-01-17%2011-08-38.png)
+   
+   ![alt text](Screenshot%20from%202020-01-17%2011-09-49.png)
+   
+   ![alt text](Screenshot%20from%202020-01-17%2011-10-34.png)
+   
    
